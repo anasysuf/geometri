@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#fff8e8">
   <title>Belajar Bentuk Geometri</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Nunito:wght@700;800;900&amp;display=swap" rel="stylesheet">
   <script src="/_sdk/b19ec5e9a6bcccbf.editing_sdk.js" integrity="sha512-zBJgQuXCQdyGFqXgZwfp8p9NowwbyuWhOK/NGHf9nps+IMSAyeeSyv3qhtfcnKWA9sWownxUevRqEhsjnjL55w=="></script>
   <style>
@@ -52,8 +51,8 @@
     .brand-mark::after { content:""; width:17px; height:17px; border-radius:4px; background:var(--blue); position:absolute; right:8px; bottom:8px }
     .brand-triangle { width:0; height:0; border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:14px solid var(--green); position:absolute; left:10px; bottom:8px }
     .app-title,.app-subtitle { margin:0 }
-    .app-title { line-height:1.05 }
-    .app-subtitle { margin-top:3px }
+    .app-title { font:900 22px/1.05 "Nunito",sans-serif }
+    .app-subtitle { margin-top:3px; color:var(--muted); font-size:13px }
     .nav-menu { display:flex; align-items:center; flex-wrap:wrap; gap:8px }
     .menu-button,.icon-button {
       min-height:46px; border:2px solid #dce7ec; background:#fff; border-radius:15px;
@@ -62,8 +61,8 @@
     }
     .icon-button { width:46px; padding:0 }
     .menu-button:hover,.icon-button:hover { transform:translateY(-2px); border-color:#8bbce8 }
-    .menu-button.is-active { background:var(--ink)!important; color:#fff!important; border-color:var(--ink)!important }
-    .menu-button svg,.icon-button svg { width:19px; height:19px }
+    .menu-button.is-active { background:var(--ink); color:#fff; border-color:var(--ink) }
+    .ui-icon { width:20px; height:20px; display:inline-grid; place-items:center; font-size:17px; line-height:1 }
     .main-content { padding-top:28px; padding-bottom:40px }
     .soft-shadow { box-shadow:0 16px 36px rgba(24,49,83,.11) }
     .raised { box-shadow:0 6px 0 rgba(24,49,83,.18); transition:transform .16s,box-shadow .16s }
@@ -72,29 +71,29 @@
 
     .routine-panel {
       margin-bottom:22px; padding:14px 18px; border:2px solid rgba(24,49,83,.09);
-      border-radius:22px; display:flex; align-items:center; gap:18px
+      border-radius:22px; display:flex; align-items:center; gap:18px; background:rgba(255,255,255,.9)
     }
-    .routine-title { margin:0; white-space:nowrap }
+    .routine-title { margin:0; white-space:nowrap; font-weight:900 }
     .routine-list { flex:1; display:grid; grid-template-columns:repeat(3,1fr); gap:9px; list-style:none; padding:0; margin:0 }
     .routine-step { min-height:46px; display:flex; align-items:center; gap:9px; border-radius:14px; padding:8px 12px; color:#627487; background:#edf2f4; font-weight:900 }
     .routine-step.is-current { color:#fff; background:var(--blue); box-shadow:0 4px 0 rgba(35,103,176,.22) }
-    .routine-step.is-current [data-template-id] { color:inherit!important }
     .step-number { width:28px; height:28px; flex:0 0 28px; display:grid; place-items:center; border-radius:50%; background:rgba(255,255,255,.85); color:var(--ink) }
 
     .primary-button,.secondary-button {
       min-height:54px; display:inline-flex; align-items:center; justify-content:center; gap:9px;
       border-radius:16px; padding:13px 22px; border:0; text-decoration:none; font-weight:900
     }
+    .primary-button { background:var(--blue); color:#fff }
     .secondary-button { border:2px solid #d7e3e8; background:#fff }
     .button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:23px }
-    .hero { overflow:hidden; position:relative; border:2px solid rgba(24,49,83,.08); border-radius:32px; padding:40px }
+    .hero { overflow:hidden; position:relative; border:2px solid rgba(24,49,83,.08); border-radius:32px; padding:40px; background:linear-gradient(135deg,#dff4ff,#fff0bd) }
     .hero::before { content:""; position:absolute; width:220px; height:220px; border-radius:50%; right:-70px; top:-100px; background:rgba(255,255,255,.35) }
     .hero-grid { display:grid; grid-template-columns:1.08fr .92fr; align-items:center; gap:32px }
     .eyebrow,.small-tag { display:inline-flex; align-items:center; border-radius:999px; padding:7px 14px; font-weight:900 }
-    .hero h1 { max-width:650px; margin:14px 0 0 }
-    .hero-copy { max-width:650px; margin:14px 0 0 }
-    .hero-note { margin:16px 0 0; display:flex; align-items:center; gap:9px; font-weight:800 }
-    .hero-note svg { width:19px; height:19px; color:var(--green) }
+    .eyebrow { background:#fff; color:var(--blue-dark) }
+    .hero h1 { max-width:650px; margin:14px 0 0; font:900 46px/1.08 "Nunito",sans-serif }
+    .hero-copy { max-width:650px; margin:14px 0 0; color:#425a70; line-height:1.6 }
+    .hero-note { margin:16px 0 0; display:flex; align-items:center; gap:9px; font-weight:800; color:#425a70 }
     .hero-art {
       position:relative; width:100%; max-width:400px; height:315px; margin:auto; border-radius:28px;
       overflow:hidden; background:linear-gradient(#7bc9f4 0 60%,#8fd57b 60% 100%);
@@ -123,50 +122,61 @@
     .concept-grid { grid-template-columns:repeat(3,1fr); margin-top:22px }
     .concept-card,.shape-card,.activity-card { border:2px solid rgba(24,49,83,.09); border-radius:24px; background:#fff }
     .concept-card { padding:21px; position:relative; overflow:hidden }
-    .concept-card::after { content:""; position:absolute; width:75px; height:75px; border-radius:50%; right:-28px; bottom:-28px; background:rgba(57,132,214,.07) }
-    .concept-icon { width:50px; height:50px; display:grid; place-items:center; border-radius:15px; margin-bottom:12px; transform:rotate(-3deg) }
-    .concept-icon svg { width:28px; height:28px }
+    .concept-icon { width:50px; height:50px; display:grid; place-items:center; border-radius:15px; margin-bottom:12px; font-size:26px }
     .concept-card h2,.concept-card p,.shape-card h3,.shape-card p,.activity-card h2,.activity-card p { margin:0 }
+    .concept-card h2,.shape-card h3,.activity-card h2 { font-family:"Nunito",sans-serif; font-weight:900 }
     .concept-card p,.shape-card p,.activity-card p { margin-top:7px }
+    .concept-card p,.shape-card p { color:var(--muted); line-height:1.5 }
     .section-heading { max-width:760px; margin:42px 0 20px }
-    .section-heading h2 { margin:12px 0 0 }
-    .section-heading p { margin:9px 0 0 }
+    .section-heading h2 { margin:12px 0 0; font:900 35px/1.15 "Nunito",sans-serif }
+    .section-heading p { margin:9px 0 0; color:var(--muted); line-height:1.6 }
     .shape-grid { grid-template-columns:repeat(2,1fr) }
     .shape-card { overflow:hidden; padding:20px; transition:transform .2s,box-shadow .2s }
     .shape-card:hover { transform:translateY(-4px) rotate(-.25deg); box-shadow:0 20px 40px rgba(24,49,83,.15) }
+    .shape-card.circle-card { background:#ffe3df }
+    .shape-card.square-card { background:#dceeff }
+    .shape-card.triangle-card { background:#fff0bd }
+    .shape-card.rectangle-card { background:#dff5e9 }
     .shape-art { min-height:190px; display:grid; place-items:center; border-radius:21px; background:rgba(255,255,255,.72); position:relative; overflow:hidden }
-    .shape-art::before { content:""; position:absolute; width:100px; height:100px; border-radius:50%; left:-48px; top:-48px; background:rgba(255,255,255,.65) }
     .shape-symbol,.activity-shape,.quiz-shape { display:block; filter:drop-shadow(0 11px 7px rgba(24,49,83,.18)) }
     .circle { border-radius:50% }
     .square { border-radius:16px }
     .rectangle { border-radius:15px }
     .triangle { width:0!important; height:0!important; border-left:54px solid transparent; border-right:54px solid transparent; border-bottom:96px solid var(--yellow) }
-    .shape-card .small-tag { margin-top:16px; padding:5px 11px }
+    .shape-card .small-tag { margin-top:16px; padding:5px 11px; background:#fff }
+    .shape-card h3 { margin-top:8px; font-size:29px }
     .property-row { display:flex; flex-wrap:wrap; gap:7px; margin-top:12px }
     .property-pill { background:rgba(255,255,255,.88); border:1px solid rgba(24,49,83,.09); border-radius:999px; padding:6px 11px; font-weight:900 }
     .fact-toggle,.fact-close { min-height:45px; border:0; border-radius:13px; padding:9px 14px; margin-top:15px; display:inline-flex; align-items:center; gap:7px; font-weight:900 }
-    .fact-toggle svg,.fact-close svg { width:19px; height:19px }
+    .fact-toggle { background:#fff }
+    .fact-close { color:#fff }
     .fact-panel { margin-top:13px; padding:14px; border-radius:14px; background:rgba(255,255,255,.82); animation:reveal .25s ease }
     @keyframes reveal { from { opacity:0; transform:translateY(5px) } to { opacity:1; transform:none } }
 
-    .cta-panel { margin-top:28px; border-radius:28px; padding:28px; display:flex; align-items:center; justify-content:space-between; gap:20px; position:relative; overflow:hidden }
-    .cta-panel::after { content:"★"; position:absolute; right:210px; top:-15px; font-size:88px; color:rgba(255,255,255,.08); transform:rotate(15deg) }
-    .cta-panel h2,.cta-panel p { margin:0; position:relative; z-index:1 }
-    .cta-panel p { margin-top:5px }
+    .cta-panel { margin-top:28px; border-radius:28px; padding:28px; display:flex; align-items:center; justify-content:space-between; gap:20px; position:relative; overflow:hidden; background:linear-gradient(135deg,#183153,#2f6590); color:#fff }
+    .cta-panel h2,.cta-panel p { margin:0 }
+    .cta-panel h2 { font:900 29px/1.15 "Nunito",sans-serif }
+    .cta-panel p { margin-top:5px; color:#dceeff }
+    .cta-panel .primary-button { background:var(--yellow); color:var(--ink) }
     .stage-heading { max-width:790px; margin-bottom:24px }
-    .stage-heading h1 { margin:10px 0 0 }
-    .stage-heading p { margin:9px 0 0 }
+    .stage-heading h1 { margin:10px 0 0; font:900 43px/1.1 "Nunito",sans-serif }
+    .stage-heading p { margin:9px 0 0; color:var(--muted); line-height:1.6 }
     .activity-top { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:18px }
     .count-pill { border-radius:999px; padding:9px 15px; background:#fff; font-weight:900; box-shadow:0 5px 14px rgba(24,49,83,.09) }
     .activity-grid { grid-template-columns:repeat(2,1fr) }
     .activity-card { width:100%; padding:18px; text-align:left; border:2px solid var(--line); transition:transform .18s,border-color .18s,box-shadow .18s }
     .activity-card:hover { border-color:#73aee2; transform:translateY(-3px) }
-    .activity-card.is-open { border-color:var(--green); box-shadow:0 13px 28px rgba(57,168,120,.17); animation:card-reveal .42s cubic-bezier(.2,.9,.25,1.15) }
-    @keyframes card-reveal { 0%{opacity:.55;transform:translateY(10px) scale(.97) rotate(-1deg)} 65%{opacity:1;transform:translateY(-4px) scale(1.015) rotate(.35deg)} 100%{opacity:1;transform:none} }
-    .activity-art { height:170px; display:grid; place-items:center; border-radius:19px; background:rgba(255,255,255,.7); overflow:hidden; position:relative }
+    .activity-card.is-open { border-color:var(--green); box-shadow:0 13px 28px rgba(57,168,120,.17) }
+    .activity-art { height:170px; display:grid; place-items:center; border-radius:19px; overflow:hidden; position:relative }
     .activity-art::after { content:"?"; position:absolute; right:16px; top:5px; font:900 55px "Nunito",sans-serif; color:rgba(24,49,83,.08) }
-    .activity-answer { margin-top:13px; padding:12px; border-radius:12px; background:#e5f6ee; animation:reveal .34s ease both }
-    .complete-panel { margin-top:24px; border-radius:25px; padding:25px; color:#fff; align-items:center; justify-content:space-between; gap:18px }
+    .activity-card h2 { margin-top:13px; font-size:23px }
+    .reveal-label { color:var(--muted) }
+    .activity-answer { margin-top:13px; padding:12px; border-radius:12px; background:#e5f6ee; color:#236648; animation:reveal .34s ease both }
+    .complete-panel { margin-top:24px; border-radius:25px; padding:25px; color:#fff; align-items:center; justify-content:space-between; gap:18px; background:linear-gradient(135deg,#183153,#277758) }
+    .complete-panel h2,.complete-panel p { margin:0 }
+    .complete-panel h2 { font:900 29px/1.15 "Nunito",sans-serif }
+    .complete-panel p { margin-top:6px; color:#dff5e9 }
+    .complete-panel .primary-button { background:var(--yellow); color:var(--ink) }
 
     .quiz-head { display:grid; grid-template-columns:1fr auto; align-items:end; gap:22px; margin-bottom:19px }
     .score-panel { min-width:145px; border:2px solid var(--line); border-radius:20px; padding:14px; text-align:center; background:#fff }
@@ -182,11 +192,21 @@
       width:220px; height:220px; display:grid; place-items:center; border-radius:30px; overflow:hidden;
       background:#fff; border:6px solid #fff; box-shadow:0 12px 28px rgba(24,49,83,.16); position:relative
     }
-    .object-tile img { width:100%; height:100%; object-fit:cover }
-    .image-fallback {
-      position:absolute; inset:0; display:grid; place-items:center; padding:20px; text-align:center;
-      background:linear-gradient(145deg,#dceeff,#fff0bd); color:var(--ink); font-weight:900
-    }
+    .object-illustration { width:100%; height:100%; position:relative; display:grid; place-items:center; overflow:hidden }
+    .clock-face { width:145px; height:145px; border:12px solid #183153; border-radius:50%; background:#fff; position:relative; box-shadow:0 8px 0 rgba(24,49,83,.13) }
+    .clock-face::before { content:""; position:absolute; width:6px; height:47px; background:#183153; left:58px; top:25px; transform-origin:bottom; transform:rotate(0deg); border-radius:4px }
+    .clock-face::after { content:""; position:absolute; width:43px; height:6px; background:#f1665d; left:64px; top:66px; border-radius:4px }
+    .book-object { width:125px; height:170px; border:8px solid #183153; border-radius:8px 16px 16px 8px; background:#f1665d; box-shadow:12px 12px 0 #ffd2ce; position:relative }
+    .book-object::after { content:"BENTUK"; position:absolute; left:18px; top:55px; color:#fff; font:900 17px "Nunito",sans-serif; transform:rotate(90deg) }
+    .tile-object { width:150px; height:150px; border:9px solid #183153; background:#dceeff; box-shadow:inset 0 0 0 12px #fff,10px 10px 0 #b7d8f5; position:relative }
+    .tile-object::before,.tile-object::after { content:""; position:absolute; background:#3984d6 }
+    .tile-object::before { width:8px; height:100%; left:62px }
+    .tile-object::after { height:8px; width:100%; top:62px }
+    .flag-object { width:0; height:0; border-left:78px solid transparent; border-right:78px solid transparent; border-top:140px solid #f7c845; filter:drop-shadow(0 10px 0 rgba(24,49,83,.16)); position:relative }
+    .flag-object::before { content:""; position:absolute; width:9px; height:175px; background:#183153; left:-82px; top:-150px; border-radius:5px }
+    .plate-object { width:165px; height:165px; border-radius:50%; background:#fff; border:16px solid #f1665d; box-shadow:inset 0 0 0 5px #ffd7d3,0 10px 0 rgba(24,49,83,.14) }
+    .door-object { width:112px; height:180px; background:#39a878; border:9px solid #183153; border-bottom-width:12px; position:relative; box-shadow:12px 12px 0 #bce7d2 }
+    .door-object::before { content:""; width:14px; height:14px; position:absolute; right:15px; top:84px; border-radius:50%; background:#f7c845; border:3px solid #183153 }
     .question-label { color:var(--blue); text-transform:uppercase; letter-spacing:.09em; font-weight:900 }
     #question-heading { margin:7px 0 0; font:900 30px/1.24 "Nunito",sans-serif }
     .quiz-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; margin-top:18px }
@@ -200,42 +220,34 @@
     .mini-shape.triangle-icon { width:0; height:0; background:transparent; border-left:13px solid transparent; border-right:13px solid transparent; border-bottom:23px solid currentColor }
     .quiz-option.is-correct { background:#e5f6ee; border-color:var(--green); color:#236648 }
     .quiz-option.is-wrong { background:#fff0ee; border-color:var(--coral); color:#913b35 }
-    .quiz-option.is-correct .shape-choice-icon { background:var(--green); color:#fff!important }
-    .quiz-option.is-wrong .shape-choice-icon { background:var(--coral); color:#fff!important }
     .feedback { margin-top:15px; padding:13px 15px; border-radius:14px; font-weight:800 }
     .feedback.correct { background:#e5f6ee; border:1px solid #b8dfcc; color:#236648 }
     .feedback.wrong { background:#fff0ee; border:1px solid #f2c3be; color:#913b35 }
     .quiz-actions { display:flex; justify-content:space-between; gap:12px; margin-top:20px }
     .right-actions { display:flex; gap:12px; margin-left:auto }
 
-    .feedback-popup { position:fixed; inset:0; z-index:60; display:grid; place-items:center; padding:20px; background:rgba(24,49,83,.35); animation:popup-fade .2s ease }
-    .feedback-popup-card { width:min(430px,100%); border:4px solid #fff; border-radius:30px; padding:29px 24px; text-align:center; background:#fff; box-shadow:0 25px 70px rgba(24,49,83,.27); animation:popup-pop .28s cubic-bezier(.2,.9,.25,1.2) }
-    .feedback-popup-badge { width:72px; height:72px; margin:0 auto 12px; display:grid; place-items:center; border-radius:50% }
-    .feedback-popup-badge svg { width:36px; height:36px }
+    .feedback-popup { position:fixed; inset:0; z-index:60; display:grid; place-items:center; padding:20px; background:rgba(24,49,83,.35) }
+    .feedback-popup-card { width:min(430px,100%); border:4px solid #fff; border-radius:30px; padding:29px 24px; text-align:center; background:#fff; box-shadow:0 25px 70px rgba(24,49,83,.27) }
+    .feedback-popup-badge { width:72px; height:72px; margin:0 auto 12px; display:grid; place-items:center; border-radius:50%; font-size:36px }
+    .feedback-popup.correct .feedback-popup-badge { background:#e5f6ee }
+    .feedback-popup.wrong .feedback-popup-badge { background:#fff0ee }
     .feedback-popup-card h2,.feedback-popup-card p { margin:0 }
+    .feedback-popup-card h2 { font:900 27px/1.15 "Nunito",sans-serif }
     .feedback-popup-card p { margin-top:8px; color:var(--muted) }
-    .feedback-popup-card button { margin-top:20px; min-height:49px; border:0; border-radius:15px; padding:10px 22px; font-weight:900 }
-    .feedback-popup.correct .feedback-popup-badge { background:#e5f6ee; color:var(--green) }
-    .feedback-popup.correct .feedback-popup-card { border-color:#b8dfcc }
-    .feedback-popup.correct button { background:var(--green)!important; color:#fff!important }
-    .feedback-popup.wrong .feedback-popup-badge { background:#fff0ee; color:var(--coral) }
-    .feedback-popup.wrong .feedback-popup-card { border-color:#f2c3be }
-    .feedback-popup.wrong button { background:var(--coral)!important; color:#fff!important }
-    @keyframes popup-fade { from{opacity:0} to{opacity:1} }
-    @keyframes popup-pop { from{opacity:0;transform:scale(.86) translateY(12px)} to{opacity:1;transform:none} }
+    .feedback-popup-card button { margin-top:20px; min-height:49px; border:0; border-radius:15px; padding:10px 22px; font-weight:900; color:#fff }
+    .feedback-popup.correct button { background:var(--green) }
+    .feedback-popup.wrong button { background:var(--coral) }
 
     .result-panel { max-width:760px; margin:auto; border:2px solid var(--line); border-radius:30px; padding:40px; background:#fff; text-align:center }
-    .award { width:86px; height:86px; display:grid; place-items:center; margin:auto; border-radius:50%; background:#fff3c8; color:#b67b00; box-shadow:0 0 0 9px rgba(247,200,69,.18) }
-    .award svg { width:45px; height:45px; fill:currentColor }
-    .result-panel h1 { margin:9px 0 0 }
+    .award { width:86px; height:86px; display:grid; place-items:center; margin:auto; border-radius:50%; background:#fff3c8; color:#b67b00; box-shadow:0 0 0 9px rgba(247,200,69,.18); font-size:44px }
+    .result-panel h1 { margin:9px 0 0; font:900 38px/1.15 "Nunito",sans-serif }
     #result-score { margin:15px 0; color:var(--blue); font:900 64px "Nunito",sans-serif }
     #result-summary { font-size:20px; font-weight:900 }
     #result-level { max-width:590px; margin:9px auto 0; color:var(--muted) }
-    .site-footer { margin-top:28px; border-top:2px solid rgba(24,49,83,.08) }
+    .site-footer { margin-top:28px; border-top:2px solid rgba(24,49,83,.08); background:rgba(255,255,255,.84) }
     .footer-inner { padding-top:22px; padding-bottom:22px; text-align:center }
     .footer-inner p { margin:0 }
-    .footer-inner p+p { margin-top:4px }
-    main,[data-template-id] { min-width:0 }
+    .footer-inner p+p { margin-top:4px; color:var(--muted); font-size:14px }
 
     @media(max-width:960px) {
       .header-inner { align-items:flex-start; flex-direction:column }
@@ -254,16 +266,14 @@
       .routine-step { justify-content:center; padding:7px }
       .step-text { display:none }
       .hero { padding:24px; border-radius:25px }
-      .hero-grid { gap:20px }
+      .hero h1 { font-size:38px }
       .hero-art { height:260px; transform:scale(.92); transform-origin:center }
       .concept-grid,.shape-grid,.activity-grid,.quiz-options { grid-template-columns:1fr }
-      .shape-art { min-height:160px }
       .cta-panel,.activity-top,.complete-panel { align-items:flex-start; flex-direction:column }
       .quiz-head { grid-template-columns:1fr }
       .score-panel { width:100% }
       .question-card { padding:16px }
-      .question-art { min-height:220px }
-      .object-tile { width:190px; height:190px }
+      .object-tile { width:190px; height:190px; transform:scale(.9) }
       .quiz-actions { flex-wrap:wrap }
       .right-actions { width:100%; margin:0 }
       .quiz-actions button { flex:1 }
@@ -277,40 +287,41 @@
       *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important }
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
   <script src="/_sdk/e3937a0574eb2d69.data_sdk.js" type="text/javascript" integrity="sha512-xbp/ACqEQy1aDxYMtXTrR3y5MUbzxuggRR/9sD48Gl4VhLMMCiAHsxMaFV6DTdeBpR6ymF+t2zhPKYkWM3+Jfw=="></script>
   <script src="/_sdk/9432170dbd2ae0df.resizing_sdk.js" type="text/javascript" integrity="sha512-FeT+58sb1f9ejWPWFjCbJvTT+SDwGV+ngrHUnlO7TWEOoqwOLj6p256kO3vOL7DIWl1cIgrobiof8v2bOigwPg=="></script>
  </head>
  <body data-template-id="__page-root">
   <div id="app-wrapper" class="app-wrapper">
-   <header data-template-id="header-section" class="canva-header site-header">
+   <header class="site-header">
     <div class="header-inner">
      <div class="brand"><span class="brand-mark" aria-hidden="true"><span class="brand-triangle"></span></span>
       <div>
-       <p data-template-id="app-title" class="canva-text app-title display-font">Taman Bentuk Ceria</p>
-       <p data-template-id="app-subtitle" class="canva-text app-subtitle">Belajar geometri sambil bermain</p>
+       <p class="app-title">Taman Bentuk Ceria</p>
+       <p class="app-subtitle">Belajar geometri sambil bermain</p>
       </div>
      </div>
-     <nav class="nav-menu" aria-label="Menu pembelajaran"><button id="learn-menu-button" data-template-id="learn-menu-button" class="canva-button menu-button is-active" type="button" aria-pressed="true"><i data-lucide="book-open" aria-hidden="true"></i><span class="menu-label">Materi</span></button> <button id="activity-menu-button" data-template-id="activity-menu-button" class="canva-button menu-button" type="button" aria-pressed="false"><i data-lucide="shapes" aria-hidden="true"></i><span class="menu-label">Latihan</span></button> <button id="quiz-menu-button" data-template-id="quiz-menu-button" class="canva-button menu-button" type="button" aria-pressed="false"><i data-lucide="pencil-line" aria-hidden="true"></i><span class="menu-label">Kuis</span></button> <button id="calm-toggle" data-template-id="calm-toggle" class="canva-button menu-button" type="button" aria-pressed="false"><i data-lucide="leaf" aria-hidden="true"></i><span class="menu-label">Mode Tenang</span></button> <button id="sound-toggle" class="icon-button" type="button" aria-label="Matikan suara" aria-pressed="true"><i id="sound-on-icon" data-lucide="volume-2" aria-hidden="true"></i><i id="sound-off-icon" data-lucide="volume-x" class="hidden" aria-hidden="true"></i></button>
+     <nav class="nav-menu" aria-label="Menu pembelajaran"><button id="learn-menu-button" class="menu-button is-active" type="button" aria-pressed="true"><span class="ui-icon">▣</span><span class="menu-label">Materi</span></button> <button id="activity-menu-button" class="menu-button" type="button" aria-pressed="false"><span class="ui-icon">◇</span><span class="menu-label">Latihan</span></button> <button id="quiz-menu-button" class="menu-button" type="button" aria-pressed="false"><span class="ui-icon">✎</span><span class="menu-label">Kuis</span></button> <button id="calm-toggle" class="menu-button" type="button" aria-pressed="false"><span class="ui-icon">☘</span><span class="menu-label">Mode Tenang</span></button> <button id="sound-toggle" class="icon-button" type="button" aria-label="Matikan suara" aria-pressed="true"><span id="sound-icon" aria-hidden="true">♫</span></button>
      </nav>
     </div>
    </header>
    <main class="main-content">
-    <section data-template-id="routine-panel" class="canva-panel routine-panel" aria-labelledby="routine-title">
-     <p id="routine-title" data-template-id="routine-title" class="canva-text routine-title">Petualanganmu</p>
+    <section class="routine-panel" aria-labelledby="routine-title">
+     <p id="routine-title" class="routine-title">Petualanganmu</p>
      <ol class="routine-list">
-      <li id="routine-learn" class="routine-step is-current"><span class="step-number">1</span><span data-template-id="routine-step-learn" class="canva-text step-text">Kenali bentuk</span></li>
-      <li id="routine-activity" class="routine-step"><span class="step-number">2</span><span data-template-id="routine-step-activity" class="canva-text step-text">Buka kartu</span></li>
-      <li id="routine-quiz" class="routine-step"><span class="step-number">3</span><span data-template-id="routine-step-quiz" class="canva-text step-text">Jawab kuis</span></li>
+      <li id="routine-learn" class="routine-step is-current"><span class="step-number">1</span><span class="step-text">Kenali bentuk</span></li>
+      <li id="routine-activity" class="routine-step"><span class="step-number">2</span><span class="step-text">Buka kartu</span></li>
+      <li id="routine-quiz" class="routine-step"><span class="step-number">3</span><span class="step-text">Jawab kuis</span></li>
      </ol>
     </section>
     <section id="learn-stage" aria-labelledby="learn-title">
-     <div data-template-id="learn-hero" class="canva-section hero soft-shadow">
+     <div class="hero soft-shadow">
       <div class="hero-grid">
-       <div><span data-template-id="learn-eyebrow" class="canva-tag eyebrow">Misi 1 · Jelajahi taman bentuk</span>
-        <h1 id="learn-title" data-template-id="learn-title" class="canva-text display-font">Bentuk apa yang bisa kamu temukan?</h1>
-        <p data-template-id="learn-intro" class="canva-text hero-copy">Lihat rumah, matahari, jendela, dan pintu. Semuanya tersusun dari lingkaran, persegi, segitiga, dan persegi panjang!</p>
-        <p data-template-id="learn-note" class="canva-text hero-note"><i data-lucide="heart-handshake" aria-hidden="true"></i>Amati perlahan—setiap bentuk punya ciri istimewa.</p>
-        <div class="button-row"><a href="#shape-cards" data-template-id="explore-shapes-button" class="canva-button primary-button raised"><i data-lucide="search" aria-hidden="true"></i>Temukan 4 Bentuk</a> <button id="hero-activity" data-template-id="hero-activity" class="canva-button secondary-button" type="button"><i data-lucide="play" aria-hidden="true"></i>Mulai Bermain</button>
+       <div><span class="eyebrow">Misi 1 · Jelajahi taman bentuk</span>
+        <h1 id="learn-title">Bentuk apa yang bisa kamu temukan?</h1>
+        <p class="hero-copy">Lihat rumah, matahari, jendela, dan pintu. Semuanya tersusun dari lingkaran, persegi, segitiga, dan persegi panjang!</p>
+        <p class="hero-note"><span aria-hidden="true">♥</span> Amati perlahan—setiap bentuk punya ciri istimewa.</p>
+        <div class="button-row"><a href="#shape-cards" class="primary-button raised"><span aria-hidden="true">⌕</span>Temukan 4 Bentuk</a> <button id="hero-activity" class="secondary-button" type="button"><span aria-hidden="true">▶</span>Mulai Bermain</button>
         </div>
        </div>
        <div class="hero-art" role="img" aria-label="Ilustrasi taman yang tersusun dari bentuk geometri"><span class="sun"></span><span class="cloud"></span><span class="hill"></span><span class="hill second"></span> <span class="house-roof"></span><span class="house"></span><span class="door"></span><span class="window"></span> <span class="tree-trunk"></span><span class="tree-top"></span><span class="shape-ball"></span>
@@ -318,104 +329,104 @@
       </div>
      </div>
      <div class="concept-grid">
-      <article data-template-id="concept-side-card" class="canva-card concept-card soft-shadow">
-       <div class="concept-icon" style="background:#dceeff;color:#2367b0">
-        <i data-lucide="move-horizontal" aria-hidden="true"></i>
+      <article class="concept-card soft-shadow">
+       <div class="concept-icon" style="background:#dceeff;color:#2367b0" aria-hidden="true">
+        ↔
        </div>
-       <h2 data-template-id="concept-side-title" class="canva-text display-font">Sisi</h2>
-       <p data-template-id="concept-side-copy" class="canva-text">Sisi adalah garis lurus yang membentuk tepi sebuah bentuk.</p>
+       <h2>Sisi</h2>
+       <p>Sisi adalah garis lurus yang membentuk tepi sebuah bentuk.</p>
       </article>
-      <article data-template-id="concept-corner-card" class="canva-card concept-card soft-shadow">
-       <div class="concept-icon" style="background:#fff0bd;color:#946900">
-        <i data-lucide="corner-down-right" aria-hidden="true"></i>
+      <article class="concept-card soft-shadow">
+       <div class="concept-icon" style="background:#fff0bd;color:#946900" aria-hidden="true">
+        ⌞
        </div>
-       <h2 data-template-id="concept-corner-title" class="canva-text display-font">Sudut</h2>
-       <p data-template-id="concept-corner-copy" class="canva-text">Sudut adalah titik tempat dua sisi bertemu.</p>
+       <h2>Sudut</h2>
+       <p>Sudut adalah titik tempat dua sisi bertemu.</p>
       </article>
-      <article data-template-id="concept-curve-card" class="canva-card concept-card soft-shadow">
-       <div class="concept-icon" style="background:#ffe2df;color:#b63f38">
-        <i data-lucide="circle" aria-hidden="true"></i>
+      <article class="concept-card soft-shadow">
+       <div class="concept-icon" style="background:#ffe2df;color:#b63f38" aria-hidden="true">
+        ○
        </div>
-       <h2 data-template-id="concept-curve-title" class="canva-text display-font">Garis lengkung</h2>
-       <p data-template-id="concept-curve-copy" class="canva-text">Garis lengkung berbelok dengan halus seperti tepi lingkaran.</p>
+       <h2>Garis lengkung</h2>
+       <p>Garis lengkung berbelok dengan halus seperti tepi lingkaran.</p>
       </article>
      </div>
-     <div class="section-heading"><span data-template-id="learn-section-label" class="canva-tag eyebrow">Kenalan dengan para bentuk</span>
-      <h2 data-template-id="learn-section-title" class="canva-text display-font">Empat bentuk, empat ciri unik</h2>
-      <p data-template-id="learn-section-copy" class="canva-text">Perhatikan warna, jumlah sisi, dan jumlah sudutnya. Tekan tombol fakta untuk menemukan petunjuk tambahan.</p>
+     <div class="section-heading"><span class="eyebrow" style="background:#dceeff">Kenalan dengan para bentuk</span>
+      <h2>Empat bentuk, empat ciri unik</h2>
+      <p>Perhatikan warna, jumlah sisi, dan jumlah sudutnya. Tekan tombol fakta untuk menemukan petunjuk tambahan.</p>
      </div>
      <div id="shape-cards" class="shape-grid">
-      <article data-template-id="circle-card" class="canva-card shape-card soft-shadow">
+      <article class="shape-card circle-card soft-shadow">
        <div class="shape-art">
         <span class="shape-symbol circle" style="width:120px;height:120px;border:10px solid white;background:#f1665d"></span>
-       </div><span data-template-id="circle-number" class="canva-tag small-tag">Bentuk 1</span>
-       <h3 data-template-id="circle-title" class="canva-text display-font">Lingkaran</h3>
-       <p data-template-id="circle-description" class="canva-text">Bulat dan melengkung mulus dari semua arah.</p>
+       </div><span class="small-tag">Bentuk 1</span>
+       <h3>Lingkaran</h3>
+       <p>Bulat dan melengkung mulus dari semua arah.</p>
        <div class="property-row">
-        <span data-template-id="circle-side" class="canva-tag property-pill">0 sisi lurus</span><span data-template-id="circle-corner" class="canva-tag property-pill">0 sudut</span>
-       </div><button data-template-id="circle-fact-open" class="canva-button fact-toggle" type="button"><i data-lucide="plus-circle" aria-hidden="true"></i>Buka fakta</button> <button data-template-id="circle-fact-close" class="canva-button fact-close hidden" type="button"><i data-lucide="minus-circle" aria-hidden="true"></i>Tutup fakta</button>
+        <span class="property-pill">0 sisi lurus</span><span class="property-pill">0 sudut</span>
+       </div><button class="fact-toggle" type="button">⊕ Buka fakta</button> <button class="fact-close hidden" style="background:#f1665d" type="button">⊖ Tutup fakta</button>
        <div class="fact-panel hidden">
-        <p data-template-id="circle-examples" class="canva-text">Contoh: matahari, jam dinding, dan piring.</p>
-        <p data-template-id="circle-fact" class="canva-text">Lingkaran tidak memiliki sisi lurus maupun sudut.</p>
+        <p><strong>Contoh:</strong> matahari, jam dinding, dan piring.</p>
+        <p>Lingkaran tidak memiliki sisi lurus maupun sudut.</p>
        </div>
       </article>
-      <article data-template-id="square-card" class="canva-card shape-card soft-shadow">
+      <article class="shape-card square-card soft-shadow">
        <div class="shape-art">
         <span class="shape-symbol square" style="width:120px;height:120px;border:10px solid white;background:#3984d6"></span>
-       </div><span data-template-id="square-number" class="canva-tag small-tag">Bentuk 2</span>
-       <h3 data-template-id="square-title" class="canva-text display-font">Persegi</h3>
-       <p data-template-id="square-description" class="canva-text">Memiliki empat sisi yang semuanya sama panjang.</p>
+       </div><span class="small-tag">Bentuk 2</span>
+       <h3>Persegi</h3>
+       <p>Memiliki empat sisi yang semuanya sama panjang.</p>
        <div class="property-row">
-        <span data-template-id="square-side" class="canva-tag property-pill">4 sisi sama</span><span data-template-id="square-corner" class="canva-tag property-pill">4 sudut</span>
-       </div><button data-template-id="square-fact-open" class="canva-button fact-toggle" type="button"><i data-lucide="plus-circle" aria-hidden="true"></i>Buka fakta</button> <button data-template-id="square-fact-close" class="canva-button fact-close hidden" type="button"><i data-lucide="minus-circle" aria-hidden="true"></i>Tutup fakta</button>
+        <span class="property-pill">4 sisi sama</span><span class="property-pill">4 sudut</span>
+       </div><button class="fact-toggle" type="button">⊕ Buka fakta</button> <button class="fact-close hidden" style="background:#3984d6" type="button">⊖ Tutup fakta</button>
        <div class="fact-panel hidden">
-        <p data-template-id="square-examples" class="canva-text">Contoh: ubin, papan permainan, dan jendela.</p>
-        <p data-template-id="square-fact" class="canva-text">Keempat sudut persegi adalah sudut siku-siku.</p>
+        <p><strong>Contoh:</strong> ubin, papan permainan, dan jendela.</p>
+        <p>Keempat sudut persegi adalah sudut siku-siku.</p>
        </div>
       </article>
-      <article data-template-id="triangle-card" class="canva-card shape-card soft-shadow">
+      <article class="shape-card triangle-card soft-shadow">
        <div class="shape-art">
         <span class="shape-symbol triangle" style="border-left-width:69px;border-right-width:69px;border-bottom-width:122px"></span>
-       </div><span data-template-id="triangle-number" class="canva-tag small-tag">Bentuk 3</span>
-       <h3 data-template-id="triangle-title" class="canva-text display-font">Segitiga</h3>
-       <p data-template-id="triangle-description" class="canva-text">Mudah dikenali karena memiliki tiga sisi dan tiga sudut.</p>
+       </div><span class="small-tag">Bentuk 3</span>
+       <h3>Segitiga</h3>
+       <p>Mudah dikenali karena memiliki tiga sisi dan tiga sudut.</p>
        <div class="property-row">
-        <span data-template-id="triangle-side" class="canva-tag property-pill">3 sisi</span><span data-template-id="triangle-corner" class="canva-tag property-pill">3 sudut</span>
-       </div><button data-template-id="triangle-fact-open" class="canva-button fact-toggle" type="button"><i data-lucide="plus-circle" aria-hidden="true"></i>Buka fakta</button> <button data-template-id="triangle-fact-close" class="canva-button fact-close hidden" type="button"><i data-lucide="minus-circle" aria-hidden="true"></i>Tutup fakta</button>
+        <span class="property-pill">3 sisi</span><span class="property-pill">3 sudut</span>
+       </div><button class="fact-toggle" type="button">⊕ Buka fakta</button> <button class="fact-close hidden" style="background:#d79d00;color:#183153" type="button">⊖ Tutup fakta</button>
        <div class="fact-panel hidden">
-        <p data-template-id="triangle-examples" class="canva-text">Contoh: atap rumah dan bendera hias.</p>
-        <p data-template-id="triangle-fact" class="canva-text">Semua segitiga selalu memiliki tepat tiga sisi.</p>
+        <p><strong>Contoh:</strong> atap rumah dan bendera hias.</p>
+        <p>Semua segitiga selalu memiliki tepat tiga sisi.</p>
        </div>
       </article>
-      <article data-template-id="rectangle-card" class="canva-card shape-card soft-shadow">
+      <article class="shape-card rectangle-card soft-shadow">
        <div class="shape-art">
         <span class="shape-symbol rectangle" style="width:174px;height:102px;border:10px solid white;background:#39a878"></span>
-       </div><span data-template-id="rectangle-number" class="canva-tag small-tag">Bentuk 4</span>
-       <h3 data-template-id="rectangle-title" class="canva-text display-font">Persegi Panjang</h3>
-       <p data-template-id="rectangle-description" class="canva-text">Memiliki dua sisi panjang dan dua sisi lebih pendek.</p>
+       </div><span class="small-tag">Bentuk 4</span>
+       <h3>Persegi Panjang</h3>
+       <p>Memiliki dua sisi panjang dan dua sisi lebih pendek.</p>
        <div class="property-row">
-        <span data-template-id="rectangle-side" class="canva-tag property-pill">4 sisi</span><span data-template-id="rectangle-corner" class="canva-tag property-pill">4 sudut</span>
-       </div><button data-template-id="rectangle-fact-open" class="canva-button fact-toggle" type="button"><i data-lucide="plus-circle" aria-hidden="true"></i>Buka fakta</button> <button data-template-id="rectangle-fact-close" class="canva-button fact-close hidden" type="button"><i data-lucide="minus-circle" aria-hidden="true"></i>Tutup fakta</button>
+        <span class="property-pill">4 sisi</span><span class="property-pill">4 sudut</span>
+       </div><button class="fact-toggle" type="button">⊕ Buka fakta</button> <button class="fact-close hidden" style="background:#39a878" type="button">⊖ Tutup fakta</button>
        <div class="fact-panel hidden">
-        <p data-template-id="rectangle-examples" class="canva-text">Contoh: pintu, buku, dan layar televisi.</p>
-        <p data-template-id="rectangle-fact" class="canva-text">Sisi yang saling berhadapan memiliki panjang yang sama.</p>
+        <p><strong>Contoh:</strong> pintu, buku, dan layar televisi.</p>
+        <p>Sisi yang saling berhadapan memiliki panjang yang sama.</p>
        </div>
       </article>
      </div>
-     <div data-template-id="learn-cta-panel" class="canva-panel cta-panel">
+     <div class="cta-panel">
       <div>
-       <h2 data-template-id="learn-cta-title" class="canva-text display-font">Sudah hafal ciri keempat bentuk?</h2>
-       <p data-template-id="learn-cta-copy" class="canva-text">Ayo buka kartu misteri dan tebak nama bentuknya.</p>
-      </div><button id="start-activity" data-template-id="start-activity" class="canva-button primary-button raised" type="button"><i data-lucide="play" aria-hidden="true"></i>Buka Kartu</button>
+       <h2>Sudah hafal ciri keempat bentuk?</h2>
+       <p>Ayo buka kartu misteri dan tebak nama bentuknya.</p>
+      </div><button id="start-activity" class="primary-button raised" type="button">▶ Buka Kartu</button>
      </div>
     </section>
     <section id="activity-stage" class="hidden" aria-labelledby="activity-title">
-     <div class="stage-heading"><span data-template-id="activity-eyebrow" class="canva-tag eyebrow">Misi 2 · Empat kartu misteri</span>
-      <h1 id="activity-title" data-template-id="activity-title" class="canva-text display-font" tabindex="-1">Tebak sebelum dibuka!</h1>
-      <p data-template-id="activity-intro" class="canva-text">Lihat bentuk dan warnanya, ucapkan namanya, lalu tekan kartu untuk memeriksa jawabanmu.</p>
+     <div class="stage-heading"><span class="eyebrow" style="background:#dff5e9;color:#277758">Misi 2 · Empat kartu misteri</span>
+      <h1 id="activity-title" tabindex="-1">Tebak sebelum dibuka!</h1>
+      <p>Lihat bentuk dan warnanya, ucapkan namanya, lalu tekan kartu untuk memeriksa jawabanmu.</p>
      </div>
      <div class="activity-top">
-      <p data-template-id="activity-instruction" class="canva-text">Buka semua kartu untuk membuka jalan menuju kuis.</p>
+      <p><strong>Buka semua kartu untuk membuka jalan menuju kuis.</strong></p>
       <div class="count-pill" aria-live="polite">
        <span id="activity-count">0</span> / 4
       </div>
@@ -423,49 +434,49 @@
      <div class="activity-grid"><button class="activity-card soft-shadow" type="button" data-activity aria-expanded="false">
        <div class="activity-art" style="background:#ffe3df">
         <span class="activity-shape circle" style="width:102px;height:102px;background:#f1665d"></span>
-       </div><h2 data-template-id="activity-circle-title" class="canva-text display-font">Bentuk merah</h2><p data-template-id="activity-reveal-label-1" class="canva-text reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
+       </div><h2>Bentuk merah</h2><p class="reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
        <div class="activity-answer hidden">
-        <p data-template-id="activity-circle-answer" class="canva-text">Lingkaran — bulat, melengkung, dan tidak memiliki sudut.</p>
+        <p>Lingkaran — bulat, melengkung, dan tidak memiliki sudut.</p>
        </div></button> <button class="activity-card soft-shadow" type="button" data-activity aria-expanded="false">
        <div class="activity-art" style="background:#dceeff">
         <span class="activity-shape square" style="width:102px;height:102px;background:#3984d6"></span>
-       </div><h2 data-template-id="activity-square-title" class="canva-text display-font">Bentuk biru</h2><p data-template-id="activity-reveal-label-2" class="canva-text reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
+       </div><h2>Bentuk biru</h2><p class="reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
        <div class="activity-answer hidden">
-        <p data-template-id="activity-square-answer" class="canva-text">Persegi — memiliki empat sisi yang sama panjang.</p>
+        <p>Persegi — memiliki empat sisi yang sama panjang.</p>
        </div></button> <button class="activity-card soft-shadow" type="button" data-activity aria-expanded="false">
        <div class="activity-art" style="background:#fff0bd">
         <span class="activity-shape triangle" style="border-left-width:56px;border-right-width:56px;border-bottom-width:100px"></span>
-       </div><h2 data-template-id="activity-triangle-title" class="canva-text display-font">Bentuk kuning</h2><p data-template-id="activity-reveal-label-3" class="canva-text reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
+       </div><h2>Bentuk kuning</h2><p class="reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
        <div class="activity-answer hidden">
-        <p data-template-id="activity-triangle-answer" class="canva-text">Segitiga — memiliki tiga sisi dan tiga sudut.</p>
+        <p>Segitiga — memiliki tiga sisi dan tiga sudut.</p>
        </div></button> <button class="activity-card soft-shadow" type="button" data-activity aria-expanded="false">
        <div class="activity-art" style="background:#dff5e9">
         <span class="activity-shape rectangle" style="width:145px;height:86px;background:#39a878"></span>
-       </div><h2 data-template-id="activity-rectangle-title" class="canva-text display-font">Bentuk hijau</h2><p data-template-id="activity-reveal-label-4" class="canva-text reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
+       </div><h2>Bentuk hijau</h2><p class="reveal-label">Pikirkan jawabannya, lalu tekan kartu</p>
        <div class="activity-answer hidden">
-        <p data-template-id="activity-rectangle-answer" class="canva-text">Persegi panjang — memiliki empat sisi dan empat sudut.</p>
+        <p>Persegi panjang — memiliki empat sisi dan empat sudut.</p>
        </div></button>
      </div>
-     <div id="activity-complete" data-template-id="activity-complete-panel" class="canva-panel complete-panel hidden">
+     <div id="activity-complete" class="complete-panel hidden">
       <div>
-       <h2 data-template-id="activity-complete-title" class="canva-text display-font">Semua kartu berhasil dibuka!</h2>
-       <p data-template-id="activity-complete-copy" class="canva-text">Hebat! Sekarang waktunya mencari bentuk pada benda-benda nyata.</p>
-      </div><button id="activity-to-quiz" data-template-id="activity-to-quiz" class="canva-button primary-button raised" type="button"><i data-lucide="play" aria-hidden="true"></i>Mulai Kuis</button>
+       <h2>Semua kartu berhasil dibuka!</h2>
+       <p>Hebat! Sekarang waktunya mencari bentuk pada benda-benda nyata.</p>
+      </div><button id="activity-to-quiz" class="primary-button raised" type="button">▶ Mulai Kuis</button>
      </div>
     </section>
     <section id="quiz-stage" class="hidden" aria-labelledby="quiz-title">
      <div class="quiz-head">
-      <div class="stage-heading" style="margin:0"><span data-template-id="quiz-eyebrow" class="canva-tag eyebrow">Misi 3 · 10 soal seru</span>
-       <h1 id="quiz-title" data-template-id="quiz-title" class="canva-text display-font" tabindex="-1">Tantangan Detektif Bentuk</h1>
-       <p data-template-id="quiz-intro" class="canva-text">Kenali bentuk asli dan temukan bentuk pada benda di sekitar kita.</p>
+      <div class="stage-heading" style="margin:0"><span class="eyebrow" style="background:#dff5e9;color:#277758">Misi 3 · 10 soal seru</span>
+       <h1 id="quiz-title" tabindex="-1">Tantangan Detektif Bentuk</h1>
+       <p>Kenali bentuk asli dan temukan bentuk pada benda di sekitar kita.</p>
       </div>
-      <aside data-template-id="quiz-score-panel" class="canva-panel score-panel" aria-label="Skor sementara">
-       <p data-template-id="quiz-score-label" class="canva-text">Jawaban benar</p>
+      <aside class="score-panel" aria-label="Skor sementara">
+       <p>Jawaban benar</p>
        <p id="live-score" aria-live="polite">0</p>
       </aside>
      </div>
      <div class="quiz-meta">
-      <p id="question-counter" aria-live="polite">Soal 1 dari 10</p><span data-template-id="answer-hint" class="canva-tag eyebrow">Pilih satu jawaban</span>
+      <p id="question-counter" aria-live="polite">Soal 1 dari 10</p><span class="eyebrow" style="background:#dceeff">Pilih satu jawaban</span>
      </div>
      <div class="progress-track" role="progressbar" aria-label="Kemajuan kuis" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1">
       <div id="quiz-progress" class="progress-bar" style="width:10%"></div>
@@ -474,77 +485,73 @@
       <div class="question-grid">
        <div id="question-art" class="question-art" role="img" aria-label="Bentuk geometri">
         <div class="object-tile"><span id="question-shape" class="quiz-shape circle"></span>
-         <div id="image-fallback" class="image-fallback hidden">
-          Contoh benda
-         </div><img data-template-id="quiz-clock-image" class="canva-image quiz-object-image hidden" loading="lazy"> <img data-template-id="quiz-book-image" class="canva-image quiz-object-image hidden" loading="lazy"> <img data-template-id="quiz-tile-image" class="canva-image quiz-object-image hidden" loading="lazy"> <img data-template-id="quiz-flag-image" class="canva-image quiz-object-image hidden" loading="lazy"> <img data-template-id="quiz-plate-image" class="canva-image quiz-object-image hidden" loading="lazy"> <img data-template-id="quiz-door-image" class="canva-image quiz-object-image hidden" loading="lazy">
+         <div id="question-object" class="object-illustration hidden" aria-hidden="true"></div>
         </div>
        </div>
        <div>
         <p id="question-label" class="question-label">Bentuk asli · Soal 1</p>
         <h2 id="question-heading" tabindex="-1">Apa nama bentuk ini?</h2>
         <div id="quiz-options" class="quiz-options" aria-label="Pilihan jawaban"></div>
-        <div id="feedback-correct" data-template-id="feedback-correct" class="canva-banner feedback correct hidden" role="status">
+        <div id="feedback-correct" class="feedback correct hidden" role="status">
          Benar! Mata detektifmu sangat jeli.
         </div>
-        <div id="feedback-wrong" data-template-id="feedback-wrong" class="canva-banner feedback wrong hidden" role="status">
+        <div id="feedback-wrong" class="feedback wrong hidden" role="status">
          Belum tepat, tetapi kamu sudah mencoba!
         </div>
         <p id="feedback-clue" class="feedback hidden" aria-live="polite"></p>
        </div>
       </div>
      </article>
-     <div class="quiz-actions"><button id="previous-question" data-template-id="previous-question" class="canva-button secondary-button" type="button" disabled><i data-lucide="arrow-left" aria-hidden="true"></i>Sebelumnya</button>
-      <div class="right-actions"><button id="next-question" data-template-id="next-question" class="canva-button primary-button raised" type="button" disabled>Berikutnya<i data-lucide="arrow-right" aria-hidden="true"></i></button> <button id="finish-quiz" data-template-id="finish-quiz" class="canva-button primary-button raised hidden" type="button" disabled><i data-lucide="check" aria-hidden="true"></i>Lihat Hasil</button>
+     <div class="quiz-actions"><button id="previous-question" class="secondary-button" type="button" disabled>← Sebelumnya</button>
+      <div class="right-actions"><button id="next-question" class="primary-button raised" type="button" disabled>Berikutnya →</button> <button id="finish-quiz" class="primary-button raised hidden" style="background:#39a878" type="button" disabled>✓ Lihat Hasil</button>
       </div>
      </div>
     </section>
     <section id="result-stage" class="hidden" aria-labelledby="result-title">
      <div class="result-panel soft-shadow">
       <div class="award" aria-hidden="true">
-       <i data-lucide="star"></i>
+       ★
       </div>
-      <p data-template-id="result-kicker" class="canva-text">Petualangan selesai</p>
-      <h1 id="result-title" data-template-id="result-title" class="canva-text display-font" tabindex="-1">Kamu Detektif Bentuk!</h1>
+      <p style="color:#277758;font-weight:900">Petualangan selesai</p>
+      <h1 id="result-title" tabindex="-1">Kamu Detektif Bentuk!</h1>
       <div id="result-score" aria-live="polite">
        0
       </div>
       <p id="result-summary">0 jawaban benar dari 10 soal</p>
       <p id="result-level">Kamu dapat belajar lagi dengan tenang.</p>
-      <div class="button-row" style="justify-content:center"><button id="retry-quiz" data-template-id="retry-quiz" class="canva-button primary-button raised" type="button"><i data-lucide="rotate-ccw" aria-hidden="true"></i>Main Lagi</button> <button id="back-to-learn" data-template-id="back-to-learn" class="canva-button secondary-button" type="button"><i data-lucide="book-open" aria-hidden="true"></i>Kembali ke Materi</button>
+      <div class="button-row" style="justify-content:center"><button id="retry-quiz" class="primary-button raised" type="button">↻ Main Lagi</button> <button id="back-to-learn" class="secondary-button" type="button">▣ Kembali ke Materi</button>
       </div>
      </div>
     </section>
    </main>
-   <footer data-template-id="footer-section" class="canva-footer site-footer">
+   <footer class="site-footer">
     <div class="footer-inner">
-     <p data-template-id="footer-title" class="canva-text">Taman Bentuk Ceria · Belajar Geometri</p>
-     <p data-template-id="footer-copy" class="canva-text">Bentuk ada di mana-mana—ayo terus mengamati!</p>
+     <p><strong>Taman Bentuk Ceria · Belajar Geometri</strong></p>
+     <p>Bentuk ada di mana-mana—ayo terus mengamati!</p>
     </div>
    </footer>
   </div>
-  <div id="feedback-popup" class="feedback-popup hidden" role="dialog" aria-modal="true" aria-labelledby="popup-correct-title">
+  <div id="feedback-popup" class="feedback-popup hidden" role="dialog" aria-modal="true" aria-labelledby="popup-title">
    <div class="feedback-popup-card">
-    <div class="feedback-popup-badge">
-     <i id="popup-correct-icon" data-lucide="sparkles" aria-hidden="true"></i><i id="popup-wrong-icon" data-lucide="heart-handshake" class="hidden" aria-hidden="true"></i>
+    <div id="popup-badge" class="feedback-popup-badge" aria-hidden="true">
+     ★
     </div>
-    <h2 id="popup-correct-title" data-template-id="popup-correct-title" class="canva-text display-font">Yeay, tepat sekali!</h2>
-    <h2 id="popup-wrong-title" data-template-id="popup-wrong-title" class="canva-text display-font hidden">Hampir benar!</h2>
-    <p id="popup-correct-copy" data-template-id="popup-correct-copy" class="canva-text">Kamu berhasil menemukan bentuk yang tepat.</p>
-    <p id="popup-wrong-copy" data-template-id="popup-wrong-copy" class="canva-text hidden">Tidak apa-apa. Lihat petunjuknya dan ingat ciri bentuk tersebut.</p><button id="feedback-popup-close" data-template-id="feedback-popup-close" class="canva-button" type="button">Lanjutkan</button>
+    <h2 id="popup-title">Yeay, tepat sekali!</h2>
+    <p id="popup-copy">Kamu berhasil menemukan bentuk yang tepat.</p><button id="feedback-popup-close" type="button">Lanjutkan</button>
    </div>
   </div>
   <script>
   const QUESTIONS = [
-    {answer:"Lingkaran",type:"circle",color:"#f1665d",clue:"Lingkaran bulat dan tidak memiliki sudut.",size:{width:"116px",height:"116px"},category:"Bentuk asli"},
-    {answer:"Persegi",type:"square",color:"#3984d6",clue:"Persegi memiliki empat sisi yang sama panjang.",size:{width:"116px",height:"116px"},category:"Bentuk asli"},
-    {answer:"Segitiga",type:"triangle",color:"#f7c845",clue:"Segitiga memiliki tiga sisi dan tiga sudut.",size:{},category:"Bentuk asli"},
-    {answer:"Persegi Panjang",type:"rectangle",color:"#39a878",clue:"Persegi panjang memiliki empat sisi dan empat sudut.",size:{width:"148px",height:"88px"},category:"Bentuk asli"},
-    {answer:"Lingkaran",type:"circle",color:"#f1665d",clue:"Jam dinding ini berbentuk lingkaran.",size:{},category:"Benda sekitar",object:"Jam dinding",imageId:"quiz-clock-image"},
-    {answer:"Persegi Panjang",type:"rectangle",color:"#39a878",clue:"Sampul buku ini berbentuk persegi panjang.",size:{},category:"Benda sekitar",object:"Buku",imageId:"quiz-book-image"},
-    {answer:"Persegi",type:"square",color:"#3984d6",clue:"Ubin ini memiliki empat sisi yang sama panjang.",size:{},category:"Benda sekitar",object:"Ubin",imageId:"quiz-tile-image"},
-    {answer:"Segitiga",type:"triangle",color:"#f7c845",clue:"Bendera hias ini berbentuk segitiga.",size:{},category:"Benda sekitar",object:"Bendera kecil",imageId:"quiz-flag-image"},
-    {answer:"Lingkaran",type:"circle",color:"#f1665d",clue:"Piring ini berbentuk lingkaran.",size:{},category:"Benda sekitar",object:"Piring",imageId:"quiz-plate-image"},
-    {answer:"Persegi Panjang",type:"rectangle",color:"#39a878",clue:"Pintu ini berbentuk persegi panjang.",size:{},category:"Benda sekitar",object:"Pintu",imageId:"quiz-door-image"}
+    {answer:"Lingkaran",type:"circle",color:"#f1665d",clue:"Lingkaran bulat dan tidak memiliki sudut.",category:"Bentuk asli"},
+    {answer:"Persegi",type:"square",color:"#3984d6",clue:"Persegi memiliki empat sisi yang sama panjang.",category:"Bentuk asli"},
+    {answer:"Segitiga",type:"triangle",color:"#f7c845",clue:"Segitiga memiliki tiga sisi dan tiga sudut.",category:"Bentuk asli"},
+    {answer:"Persegi Panjang",type:"rectangle",color:"#39a878",clue:"Persegi panjang memiliki empat sisi dan empat sudut.",category:"Bentuk asli"},
+    {answer:"Lingkaran",object:"Jam dinding",objectClass:"clock-face",clue:"Jam dinding ini berbentuk lingkaran.",category:"Benda sekitar"},
+    {answer:"Persegi Panjang",object:"Buku",objectClass:"book-object",clue:"Sampul buku ini berbentuk persegi panjang.",category:"Benda sekitar"},
+    {answer:"Persegi",object:"Ubin",objectClass:"tile-object",clue:"Ubin ini memiliki empat sisi yang sama panjang.",category:"Benda sekitar"},
+    {answer:"Segitiga",object:"Bendera kecil",objectClass:"flag-object",clue:"Bendera hias ini berbentuk segitiga.",category:"Benda sekitar"},
+    {answer:"Lingkaran",object:"Piring",objectClass:"plate-object",clue:"Piring ini berbentuk lingkaran.",category:"Benda sekitar"},
+    {answer:"Persegi Panjang",object:"Pintu",objectClass:"door-object",clue:"Pintu ini berbentuk persegi panjang.",category:"Benda sekitar"}
   ];
   const OPTIONS = ["Lingkaran","Persegi","Segitiga","Persegi Panjang"];
   const SHAPES = {
@@ -554,8 +561,12 @@
     "Persegi Panjang":{cls:"rectangle-icon",color:"#39a878"}
   };
 
-  let questionIndex=0, answers=Array(QUESTIONS.length).fill(null), soundEnabled=true;
-  let audioContext=null, activityFound=0;
+  let questionIndex=0;
+  let answers=Array(QUESTIONS.length).fill(null);
+  let soundEnabled=true;
+  let audioContext=null;
+  let activityFound=0;
+
   const stages={
     learn:document.getElementById("learn-stage"),
     activity:document.getElementById("activity-stage"),
@@ -573,12 +584,18 @@
     try{
       audioContext=audioContext||new(window.AudioContext||window.webkitAudioContext)();
       if(audioContext.state==="suspended")audioContext.resume();
-      const start=audioContext.currentTime+delay,oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
-      oscillator.type="sine"; oscillator.frequency.setValueAtTime(frequency,start);
-      gain.gain.setValueAtTime(.0001,start); gain.gain.exponentialRampToValueAtTime(.045,start+.01);
+      const start=audioContext.currentTime+delay;
+      const oscillator=audioContext.createOscillator();
+      const gain=audioContext.createGain();
+      oscillator.type="sine";
+      oscillator.frequency.setValueAtTime(frequency,start);
+      gain.gain.setValueAtTime(.0001,start);
+      gain.gain.exponentialRampToValueAtTime(.045,start+.01);
       gain.gain.exponentialRampToValueAtTime(.0001,start+duration);
-      oscillator.connect(gain); gain.connect(audioContext.destination);
-      oscillator.start(start); oscillator.stop(start+duration+.03);
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start(start);
+      oscillator.stop(start+duration+.03);
     }catch(_){}
   }
   const playClick=()=>tone(410,.07);
@@ -587,73 +604,114 @@
   const playComplete=()=>{tone(523,.1);tone(659,.1,.11);tone(784,.16,.22)};
 
   function shuffleQuestions(){
-    for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[QUESTIONS[i],QUESTIONS[j]]=[QUESTIONS[j],QUESTIONS[i]]}
+    for(let i=QUESTIONS.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [QUESTIONS[i],QUESTIONS[j]]=[QUESTIONS[j],QUESTIONS[i]];
+    }
   }
-  function focusHeading(id){const el=document.getElementById(id);if(el)el.focus({preventScroll:true})}
+
+  function focusHeading(id){
+    const element=document.getElementById(id);
+    if(element)element.focus({preventScroll:true});
+  }
+
   function updateRoutine(stage){
     document.getElementById("routine-learn").classList.toggle("is-current",stage==="learn");
     document.getElementById("routine-activity").classList.toggle("is-current",stage==="activity");
     document.getElementById("routine-quiz").classList.toggle("is-current",stage==="quiz"||stage==="result");
   }
+
   function showStage(stage,moveFocus=true){
-    Object.entries(stages).forEach(([key,el])=>el.classList.toggle("hidden",key!==stage));
+    Object.entries(stages).forEach(([key,element])=>element.classList.toggle("hidden",key!==stage));
     Object.entries(menus).forEach(([key,button])=>{
       const active=key===stage||(stage==="result"&&key==="quiz");
-      button.classList.toggle("is-active",active); button.setAttribute("aria-pressed",String(active));
+      button.classList.toggle("is-active",active);
+      button.setAttribute("aria-pressed",String(active));
     });
-    updateRoutine(stage); window.scrollTo({top:0,behavior:"smooth"});
+    updateRoutine(stage);
+    window.scrollTo({top:0,behavior:"smooth"});
     if(moveFocus)focusHeading(stage==="result"?"result-title":`${stage}-title`);
   }
 
   document.querySelectorAll(".shape-card").forEach(card=>{
-    const open=card.querySelector(".fact-toggle"),close=card.querySelector(".fact-close"),panel=card.querySelector(".fact-panel");
-    open.addEventListener("click",()=>{panel.classList.remove("hidden");open.classList.add("hidden");close.classList.remove("hidden");playClick()});
-    close.addEventListener("click",()=>{panel.classList.add("hidden");close.classList.add("hidden");open.classList.remove("hidden");playClick()});
+    const open=card.querySelector(".fact-toggle");
+    const close=card.querySelector(".fact-close");
+    const panel=card.querySelector(".fact-panel");
+    open.addEventListener("click",()=>{
+      panel.classList.remove("hidden");
+      open.classList.add("hidden");
+      close.classList.remove("hidden");
+      playClick();
+    });
+    close.addEventListener("click",()=>{
+      panel.classList.add("hidden");
+      close.classList.add("hidden");
+      open.classList.remove("hidden");
+      playClick();
+    });
   });
 
   document.querySelectorAll("[data-activity]").forEach(card=>{
     card.addEventListener("click",()=>{
       if(card.classList.contains("is-open"))return;
-      card.classList.add("is-open"); card.setAttribute("aria-expanded","true");
+      card.classList.add("is-open");
+      card.setAttribute("aria-expanded","true");
       card.querySelector(".activity-answer").classList.remove("hidden");
       card.querySelector(".reveal-label").classList.add("hidden");
-      activityFound++; document.getElementById("activity-count").textContent=String(activityFound); playCorrect();
+      activityFound++;
+      document.getElementById("activity-count").textContent=String(activityFound);
+      playCorrect();
       if(activityFound===4){
         const complete=document.getElementById("activity-complete");
-        complete.classList.remove("hidden"); complete.style.display="flex"; playComplete();
+        complete.classList.remove("hidden");
+        complete.style.display="flex";
+        playComplete();
       }
     });
   });
 
-  function correctCount(){return answers.reduce((total,answer,index)=>total+(answer===QUESTIONS[index].answer?1:0),0)}
+  function correctCount(){
+    return answers.reduce((total,answer,index)=>total+(answer===QUESTIONS[index].answer?1:0),0);
+  }
+
   function shapeIcon(name){
     const shape=SHAPES[name];
     return `<span class="shape-choice-icon" style="color:${shape.color}"><span class="mini-shape ${shape.cls}"></span></span>`;
   }
+
   function setQuestionVisual(question){
-    const shape=document.getElementById("question-shape"),fallback=document.getElementById("image-fallback");
-    document.querySelectorAll(".quiz-object-image").forEach(image=>image.classList.add("hidden"));
-    fallback.classList.add("hidden"); shape.removeAttribute("style");
-    if(question.imageId){
-      shape.classList.add("hidden");
-      const image=document.querySelector(`[data-template-id="${question.imageId}"]`);
-      fallback.textContent=question.object||"Contoh benda";
-      if(image){
-        image.classList.remove("hidden");
-        if(!image.getAttribute("src"))fallback.classList.remove("hidden");
-      }else fallback.classList.remove("hidden");
+    const shape=document.getElementById("question-shape");
+    const object=document.getElementById("question-object");
+    shape.removeAttribute("style");
+    object.replaceChildren();
+    object.classList.add("hidden");
+
+    if(question.objectClass){
+      shape.className="quiz-shape hidden";
+      const illustration=document.createElement("span");
+      illustration.className=question.objectClass;
+      object.appendChild(illustration);
+      object.classList.remove("hidden");
       return;
     }
+
     shape.className=`quiz-shape ${question.type}`;
     if(question.type==="triangle"){
-      shape.style.borderLeftWidth="60px"; shape.style.borderRightWidth="60px";
-      shape.style.borderBottomWidth="108px"; shape.style.borderBottomColor=question.color;
+      shape.style.borderLeftWidth="60px";
+      shape.style.borderRightWidth="60px";
+      shape.style.borderBottomWidth="108px";
+      shape.style.borderBottomColor=question.color;
     }else{
-      shape.style.width=question.size.width; shape.style.height=question.size.height; shape.style.background=question.color;
+      shape.style.width=question.type==="rectangle"?"148px":"116px";
+      shape.style.height=question.type==="rectangle"?"88px":"116px";
+      shape.style.background=question.color;
     }
   }
+
   function renderQuestion(){
-    const question=QUESTIONS[questionIndex],selected=answers[questionIndex];
+    const question=QUESTIONS[questionIndex];
+    const selected=answers[questionIndex];
+
     document.getElementById("question-counter").textContent=`Soal ${questionIndex+1} dari ${QUESTIONS.length}`;
     document.getElementById("question-label").textContent=`${question.category} · Soal ${questionIndex+1}`;
     document.getElementById("question-heading").textContent=question.object?`Benda ini berbentuk apa? (${question.object})`:"Apa nama bentuk ini?";
@@ -664,17 +722,26 @@
     options.replaceChildren();
     OPTIONS.forEach(name=>{
       const button=document.createElement("button");
-      button.type="button"; button.className="quiz-option"; button.innerHTML=`${shapeIcon(name)}<span>${name}</span>`;
+      button.type="button";
+      button.className="quiz-option";
+      button.innerHTML=`${shapeIcon(name)}<span>${name}</span>`;
       if(selected){
         button.disabled=true;
         if(name===question.answer)button.classList.add("is-correct");
         if(name===selected&&selected!==question.answer)button.classList.add("is-wrong");
       }
-      button.addEventListener("click",()=>selectAnswer(name)); options.appendChild(button);
+      button.addEventListener("click",()=>selectAnswer(name));
+      options.appendChild(button);
     });
 
-    const correctFeedback=document.getElementById("feedback-correct"),wrongFeedback=document.getElementById("feedback-wrong"),clue=document.getElementById("feedback-clue");
-    correctFeedback.classList.add("hidden"); wrongFeedback.classList.add("hidden"); clue.className="feedback hidden"; clue.textContent="";
+    const correctFeedback=document.getElementById("feedback-correct");
+    const wrongFeedback=document.getElementById("feedback-wrong");
+    const clue=document.getElementById("feedback-clue");
+    correctFeedback.classList.add("hidden");
+    wrongFeedback.classList.add("hidden");
+    clue.className="feedback hidden";
+    clue.textContent="";
+
     if(selected){
       const isCorrect=selected===question.answer;
       (isCorrect?correctFeedback:wrongFeedback).classList.remove("hidden");
@@ -685,41 +752,69 @@
     document.getElementById("live-score").textContent=String(correctCount());
     document.getElementById("quiz-progress").style.width=`${((questionIndex+1)/QUESTIONS.length)*100}%`;
     document.querySelector(".progress-track").setAttribute("aria-valuenow",String(questionIndex+1));
-    const previous=document.getElementById("previous-question"),next=document.getElementById("next-question"),finish=document.getElementById("finish-quiz"),last=questionIndex===QUESTIONS.length-1;
-    previous.disabled=questionIndex===0; next.classList.toggle("hidden",last); finish.classList.toggle("hidden",!last);
-    next.disabled=!selected; finish.disabled=!selected;
+
+    const previous=document.getElementById("previous-question");
+    const next=document.getElementById("next-question");
+    const finish=document.getElementById("finish-quiz");
+    const last=questionIndex===QUESTIONS.length-1;
+
+    previous.disabled=questionIndex===0;
+    next.classList.toggle("hidden",last);
+    finish.classList.toggle("hidden",!last);
+    next.disabled=!selected;
+    finish.disabled=!selected;
   }
+
   function showFeedbackPopup(isCorrect){
     const popup=document.getElementById("feedback-popup");
     popup.className=`feedback-popup ${isCorrect?"correct":"wrong"}`;
-    popup.setAttribute("aria-labelledby",isCorrect?"popup-correct-title":"popup-wrong-title");
-    document.getElementById("popup-correct-title").classList.toggle("hidden",!isCorrect);
-    document.getElementById("popup-wrong-title").classList.toggle("hidden",isCorrect);
-    document.getElementById("popup-correct-copy").classList.toggle("hidden",!isCorrect);
-    document.getElementById("popup-wrong-copy").classList.toggle("hidden",isCorrect);
-    document.getElementById("popup-correct-icon").classList.toggle("hidden",!isCorrect);
-    document.getElementById("popup-wrong-icon").classList.toggle("hidden",isCorrect);
+    document.getElementById("popup-badge").textContent=isCorrect?"★":"♥";
+    document.getElementById("popup-title").textContent=isCorrect?"Yeay, tepat sekali!":"Hampir benar!";
+    document.getElementById("popup-copy").textContent=isCorrect
+      ?"Kamu berhasil menemukan bentuk yang tepat."
+      :"Tidak apa-apa. Lihat petunjuknya dan ingat ciri bentuk tersebut.";
     document.getElementById("feedback-popup-close").focus();
   }
-  function closeFeedbackPopup(){document.getElementById("feedback-popup").classList.add("hidden");focusHeading("question-heading")}
+
+  function closeFeedbackPopup(){
+    document.getElementById("feedback-popup").classList.add("hidden");
+    focusHeading("question-heading");
+  }
+
   function selectAnswer(name){
     if(answers[questionIndex])return;
     answers[questionIndex]=name;
     const isCorrect=name===QUESTIONS[questionIndex].answer;
-    isCorrect?playCorrect():playWrong(); renderQuestion(); showFeedbackPopup(isCorrect);
+    isCorrect?playCorrect():playWrong();
+    renderQuestion();
+    showFeedbackPopup(isCorrect);
   }
-  function resetQuiz(){questionIndex=0;answers=Array(QUESTIONS.length).fill(null);renderQuestion()}
-  function startQuiz(){shuffleQuestions();resetQuiz();showStage("quiz")}
+
+  function resetQuiz(){
+    questionIndex=0;
+    answers=Array(QUESTIONS.length).fill(null);
+    renderQuestion();
+  }
+
+  function startQuiz(){
+    shuffleQuestions();
+    resetQuiz();
+    showStage("quiz");
+  }
+
   function showResult(){
     if(!answers[questionIndex])return;
-    const correct=correctCount(),score=Math.round(correct/QUESTIONS.length*100);
+    const correct=correctCount();
+    const score=Math.round(correct/QUESTIONS.length*100);
     document.getElementById("result-score").textContent=String(score);
     document.getElementById("result-summary").textContent=`${correct} jawaban benar dari ${QUESTIONS.length} soal`;
     document.getElementById("result-level").textContent=score>=80
       ?"Luar biasa! Kamu sudah sangat hebat mengenali bentuk di sekitar."
-      :score>=50?"Bagus! Kamu sudah mengenali banyak bentuk. Coba lagi untuk menjadi juara bentuk."
-      :"Tetap semangat! Lihat kembali empat kartu bentuk, lalu coba kuis sekali lagi.";
-    playComplete(); showStage("result");
+      :score>=50
+        ?"Bagus! Kamu sudah mengenali banyak bentuk. Coba lagi untuk menjadi juara bentuk."
+        :"Tetap semangat! Lihat kembali empat kartu bentuk, lalu coba kuis sekali lagi.";
+    playComplete();
+    showStage("result");
   }
 
   menus.learn.addEventListener("click",()=>{playClick();showStage("learn")});
@@ -728,18 +823,33 @@
   document.getElementById("hero-activity").addEventListener("click",()=>{playClick();showStage("activity")});
   document.getElementById("start-activity").addEventListener("click",()=>{playClick();showStage("activity")});
   document.getElementById("activity-to-quiz").addEventListener("click",startQuiz);
-  document.getElementById("previous-question").addEventListener("click",()=>{if(questionIndex===0)return;questionIndex--;playClick();renderQuestion();focusHeading("question-heading")});
-  document.getElementById("next-question").addEventListener("click",()=>{if(!answers[questionIndex]||questionIndex>=QUESTIONS.length-1)return;questionIndex++;playClick();renderQuestion();focusHeading("question-heading")});
+  document.getElementById("previous-question").addEventListener("click",()=>{
+    if(questionIndex===0)return;
+    questionIndex--;
+    playClick();
+    renderQuestion();
+    focusHeading("question-heading");
+  });
+  document.getElementById("next-question").addEventListener("click",()=>{
+    if(!answers[questionIndex]||questionIndex>=QUESTIONS.length-1)return;
+    questionIndex++;
+    playClick();
+    renderQuestion();
+    focusHeading("question-heading");
+  });
   document.getElementById("finish-quiz").addEventListener("click",showResult);
   document.getElementById("feedback-popup-close").addEventListener("click",closeFeedbackPopup);
-  document.getElementById("feedback-popup").addEventListener("click",event=>{if(event.target.id==="feedback-popup")closeFeedbackPopup()});
-  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!document.getElementById("feedback-popup").classList.contains("hidden"))closeFeedbackPopup()});
+  document.getElementById("feedback-popup").addEventListener("click",event=>{
+    if(event.target.id==="feedback-popup")closeFeedbackPopup();
+  });
+  document.addEventListener("keydown",event=>{
+    if(event.key==="Escape"&&!document.getElementById("feedback-popup").classList.contains("hidden"))closeFeedbackPopup();
+  });
   document.getElementById("retry-quiz").addEventListener("click",startQuiz);
   document.getElementById("back-to-learn").addEventListener("click",()=>showStage("learn"));
   document.getElementById("sound-toggle").addEventListener("click",()=>{
     soundEnabled=!soundEnabled;
-    document.getElementById("sound-on-icon").classList.toggle("hidden",!soundEnabled);
-    document.getElementById("sound-off-icon").classList.toggle("hidden",soundEnabled);
+    document.getElementById("sound-icon").textContent=soundEnabled?"♫":"×";
     const button=document.getElementById("sound-toggle");
     button.setAttribute("aria-pressed",String(soundEnabled));
     button.setAttribute("aria-label",soundEnabled?"Matikan suara":"Aktifkan suara");
@@ -748,14 +858,10 @@
   document.getElementById("calm-toggle").addEventListener("click",event=>{
     const enabled=document.getElementById("app-wrapper").classList.toggle("calm-mode");
     event.currentTarget.setAttribute("aria-pressed",String(enabled));
-    event.currentTarget.classList.toggle("is-active",enabled); playClick();
-  });
-  document.querySelectorAll(".quiz-object-image").forEach(image=>{
-    image.addEventListener("load",()=>document.getElementById("image-fallback").classList.add("hidden"));
-    image.addEventListener("error",()=>document.getElementById("image-fallback").classList.remove("hidden"));
+    event.currentTarget.classList.toggle("is-active",enabled);
+    playClick();
   });
 
-  if(window.lucide)lucide.createIcons();
   renderQuestion();
   showStage("learn",false);
 </script>

@@ -204,9 +204,11 @@
     .tile-object::after { height:8px; width:100%; top:62px }
     .flag-object { width:0; height:0; border-left:78px solid transparent; border-right:78px solid transparent; border-top:140px solid #f7c845; filter:drop-shadow(0 10px 0 rgba(24,49,83,.16)); position:relative }
     .flag-object::before { content:""; position:absolute; width:9px; height:175px; background:#183153; left:-82px; top:-150px; border-radius:5px }
-    .plate-object { width:165px; height:165px; border-radius:50%; background:#fff; border:16px solid #f1665d; box-shadow:inset 0 0 0 5px #ffd7d3,0 10px 0 rgba(24,49,83,.14) }
-    .door-object { width:112px; height:180px; background:#39a878; border:9px solid #183153; border-bottom-width:12px; position:relative; box-shadow:12px 12px 0 #bce7d2 }
-    .door-object::before { content:""; width:14px; height:14px; position:absolute; right:15px; top:84px; border-radius:50%; background:#f7c845; border:3px solid #183153 }
+    .plate-object { width:170px; height:170px; border-radius:50%; background:#fff; border:13px solid #f1665d; box-shadow:inset 0 0 0 6px #ffd7d3,0 10px 0 rgba(24,49,83,.14); position:relative }
+    .plate-object::before { content:""; position:absolute; inset:25px; border:4px solid #ffd7d3; border-radius:50% }
+    .door-object { width:122px; height:184px; background:linear-gradient(90deg,#39a878 0 50%,#32966c 50%); border:8px solid #183153; border-bottom-width:11px; border-radius:8px 8px 0 0; position:relative; box-shadow:10px 10px 0 #bce7d2 }
+    .door-object::before { content:""; width:13px; height:13px; position:absolute; right:13px; top:82px; border-radius:50%; background:#f7c845; border:3px solid #183153 }
+    .door-object::after { content:""; position:absolute; width:35px; height:48px; left:17px; top:20px; border:5px solid #183153; background:#dceeff; box-shadow:45px 0 0 -5px #dceeff,45px 0 0 0 #183153 }
     .question-label { color:var(--blue); text-transform:uppercase; letter-spacing:.09em; font-weight:900 }
     #question-heading { margin:7px 0 0; font:900 30px/1.24 "Nunito",sans-serif }
     .quiz-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; margin-top:18px }

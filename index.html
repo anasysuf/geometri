@@ -193,18 +193,18 @@
       background:#fff; border:6px solid #fff; box-shadow:0 12px 28px rgba(24,49,83,.16); position:relative
     }
     .object-illustration { width:100%; height:100%; position:relative; display:grid; place-items:center; overflow:hidden }
-    .clock-face { width:145px; height:145px; border:12px solid #183153; border-radius:50%; background:#fff; position:relative; box-shadow:0 8px 0 rgba(24,49,83,.13) }
-    .clock-face::before { content:""; position:absolute; width:6px; height:47px; background:#183153; left:58px; top:25px; transform-origin:bottom; transform:rotate(0deg); border-radius:4px }
-    .clock-face::after { content:""; position:absolute; width:43px; height:6px; background:#f1665d; left:64px; top:66px; border-radius:4px }
+   .clock-face { width:150px; height:150px; border:10px solid #183153; border-radius:50%; background:#fff; position:relative; box-shadow:0 8px 0 rgba(24,49,83,.13) }
+    .clock-face::before { content:""; position:absolute; width:6px; height:47px; background:#183153; left:62px; top:23px; transform-origin:bottom; transform:rotate(0deg); border-radius:4px }
+    .clock-face::after { content:""; position:absolute; width:45px; height:6px; background:#f1665d; left:67px; top:67px; border-radius:4px; transform-origin:left center; transform:rotate(8deg) }
     .book-object { width:142px; height:184px; border:7px solid #183153; border-radius:10px 20px 20px 10px; background:linear-gradient(135deg,#f1665d 0 78%,#d84f4a 78%); box-shadow:11px 11px 0 #ffd2ce; position:relative; overflow:hidden; transform:rotate(-4deg) }
     .book-object::before { content:""; position:absolute; left:17px; top:0; width:10px; height:100%; background:#ffd2ce; opacity:.95; box-shadow:6px 0 0 rgba(24,49,83,.18) }
-    .book-object::after { content:"Buku"; position:absolute; left:48px; top:67px; color:#fff; font:900 15px "Nunito",sans-serif; 
-    .tile-object { width:150px; height:150px; border:9px solid #183153; background:#dceeff; box-shadow:inset 0 0 0 12px #fff,10px 10px 0 #b7d8f5; position:relative }
-    .tile-object::before,.tile-object::after { content:""; position:absolute; background:#3984d6 }
-    .tile-object::before { width:8px; height:100%; left:62px }
-    .tile-object::after { height:8px; width:100%; top:62px }
-    .flag-object { width:0; height:0; border-left:78px solid transparent; border-right:78px solid transparent; border-top:140px solid #f7c845; filter:drop-shadow(0 10px 0 rgba(24,49,83,.16)); position:relative }
-    .flag-object::before { content:""; position:absolute; width:9px; height:175px; background:#183153; left:-82px; top:-150px; border-radius:5px }
+    .book-object::after { content:"BENTUK"; position:absolute; left:48px; top:67px; color:#fff; font:900 15px "Nunito",sans-serif; transform:rotate(90deg); transform-origin:center; letter-spacing:.04em }
+    .tile-object { width:164px; height:164px; border:8px solid #183153; border-radius:9px; background:#dceeff; box-shadow:inset 0 0 0 10px #fff,10px 10px 0 #b7d8f5; position:relative; transform:rotate(-2deg) }
+    .tile-object::before,.tile-object::after { content:""; position:absolute; background:#3984d6; border-radius:2px }
+    .tile-object::before { width:7px; height:100%; left:69px }
+    .tile-object::after { height:7px; width:100%; top:69px }
+   .flag-object { width:0; height:0; border-left:70px solid transparent; border-right:70px solid transparent; border-top:122px solid #f7c845; filter:drop-shadow(0 10px 0 rgba(24,49,83,.16)); position:relative; margin-top:8px }
+    .flag-object::before { content:""; position:absolute; width:8px; height:160px; background:#183153; left:-74px; top:-130px; border-radius:5px }
     .plate-object { width:170px; height:170px; border-radius:50%; background:#fff; border:13px solid #f1665d; box-shadow:inset 0 0 0 6px #ffd7d3,0 10px 0 rgba(24,49,83,.14); position:relative }
     .plate-object::before { content:""; position:absolute; inset:25px; border:4px solid #ffd7d3; border-radius:50% }
     .door-object { width:122px; height:184px; background:linear-gradient(90deg,#39a878 0 50%,#32966c 50%); border:8px solid #183153; border-bottom-width:11px; border-radius:8px 8px 0 0; position:relative; box-shadow:10px 10px 0 #bce7d2 }
@@ -551,7 +551,7 @@
     {answer:"Persegi Panjang",type:"rectangle",color:"#39a878",clue:"Persegi panjang memiliki empat sisi dan empat sudut.",category:"Bentuk asli"},
     {answer:"Lingkaran",object:"Jam dinding",objectClass:"clock-face",clue:"Jam dinding ini berbentuk lingkaran.",category:"Benda sekitar"},
     {answer:"Persegi Panjang",object:"Buku",objectClass:"book-object",clue:"Sampul buku ini berbentuk persegi panjang.",category:"Benda sekitar"},
-    {answer:"Persegi",object:"Ubin",objectClass:"tile-object",clue:"Ubin ini memiliki empat sisi yang sama panjang.",category:"Benda sekitar"},
+    {answer:"Persegi",object:"Jendela",objectClass:"tile-object",clue:"Jendela ini memiliki empat sisi yang sama panjang.",category:"Benda sekitar"},
     {answer:"Segitiga",object:"Bendera kecil",objectClass:"flag-object",clue:"Bendera hias ini berbentuk segitiga.",category:"Benda sekitar"},
     {answer:"Lingkaran",object:"Piring",objectClass:"plate-object",clue:"Piring ini berbentuk lingkaran.",category:"Benda sekitar"},
     {answer:"Persegi Panjang",object:"Pintu",objectClass:"door-object",clue:"Pintu ini berbentuk persegi panjang.",category:"Benda sekitar"}

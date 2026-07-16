@@ -203,8 +203,15 @@
     .tile-object::before,.tile-object::after { content:""; position:absolute; background:#3984d6; border-radius:2px }
     .tile-object::before { width:7px; height:100%; left:69px }
     .tile-object::after { height:7px; width:100%; top:69px }
-   .flag-object { width:0; height:0; border-left:70px solid transparent; border-right:70px solid transparent; border-top:122px solid #f7c845; filter:drop-shadow(0 10px 0 rgba(24,49,83,.16)); position:relative; margin-top:8px }
-    .flag-object::before { content:""; position:absolute; width:8px; height:160px; background:#183153; left:-74px; top:-130px; border-radius:5px }
+   .flag-object {
+  width: 0;
+  height: 0;
+  /* Membuat batas atas dan bawah transparan agar membentuk sudut */
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  /* Memberikan warna pada batas kiri untuk membuat segitiga menghadap kanan */
+  border-left: 150px solid #f7c845;
+}
     .plate-object { width:170px; height:170px; border-radius:50%; background:#fff; border:13px solid #f1665d; box-shadow:inset 0 0 0 6px #ffd7d3,0 10px 0 rgba(24,49,83,.14); position:relative }
     .plate-object::before { content:""; position:absolute; inset:25px; border:4px solid #ffd7d3; border-radius:50% }
     .door-object { width:122px; height:184px; background:linear-gradient(90deg,#39a878 0 50%,#32966c 50%); border:8px solid #183153; border-bottom-width:11px; border-radius:8px 8px 0 0; position:relative; box-shadow:10px 10px 0 #bce7d2 }
